@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  font-family: "Dancing Script", serif;
+  font-size: 25px;
+}
+.burger,
+.close {
+  width: 25px;
+  height: 25px;
+}
+.logo span,
+.active,
+.burger,
+.close {
+  color: #ff014f;
+}
+.close {
+  margin-top: 15px;
+}
+.closeMenu {
+  display: none;
+}
+.menu {
+  z-index: 10;
+  transform: translateX(150%);
+  transition: transform 0.5s ease;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7b3c8;
+  position: fixed;
+  top: 0;
+  left: -16px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 35px;
+  text-align: center;
+  margin-top: 20px;
+}
+.item {
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+.item.active {
+  color: #ff014f;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 20px 0;
+  }
+  .burger,
+  .close {
+    display: none;
+  }
+  .menu {
+    transform: translateX(0);
+    background-color: transparent;
+    position: sticky;
+    width: auto;
+    height: auto;
+  }
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+    padding: 0;
+    margin-top: 0;
+    gap: 0;
+  }
+  .closeMenu {
+    display: block;
+  }
+  .item {
+    padding: 10px;
+    color: black;
+    text-transform: capitalize;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .item {
+    cursor: pointer;
+  }
+}
