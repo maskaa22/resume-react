@@ -1,0 +1,147 @@
+.hero {
+  padding: 10px 0;
+}
+.info {
+  margin-bottom: 10px;
+}
+.h1 {
+  font-weight: 600;
+  font-size: 50px;
+  text-align: center;
+}
+.h1 span {
+  color: #c762e7;
+}
+.title {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #838181;
+  text-align: center;
+}
+.text {
+  margin-top: 20px;
+  text-align: justify;
+}
+.text span {
+  display: none;
+}
+.buttonContainer {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.download {
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background-color: #c762e7;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.talk {
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  background-color: transparent;
+  border: 1px solid #c762e7;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 20px;
+}
+.social {
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  color: #7c0c86;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  padding: 5px;
+  border: 1px solid #c762e7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.foto {
+  margin: 0 auto;
+  width: 250px;
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .info {
+    margin-bottom: 0;
+    width: 40%;
+  }
+  .h1 {
+    padding-top: 90px;
+    font-size: 40px;
+    text-align: start;
+  }
+  .title {
+    text-align: start;
+  }
+  .text {
+    margin-top: 30px;
+  }
+  .foto {
+    margin: 0;
+    width: 300px;
+  }
+  .buttonContainer {
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+  .download,
+  .talk {
+    padding: 10px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .info {
+    width: 50%;
+  }
+  .h1 {
+    padding-top: 120px;
+    font-weight: 600;
+    font-size: 64px;
+  }
+  .title {
+    font-size: 24px;
+    letter-spacing: 0.08em;
+  }
+  .text {
+    font-size: 20px;
+    letter-spacing: 0.03em;
+  }
+  .text span {
+    display: block;
+  }
+  .buttonContainer {
+    justify-content: start;
+  }
+  .download,
+  .talk {
+    font-size: 20px;
+    letter-spacing: 0.03em;
+  }
+  .social {
+    justify-content: start;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .foto {
+    width: 400px;
+  }
+}

@@ -42,7 +42,7 @@ export default function Header() {
                   }`}
                   onClick={() => setActiveItem(index)}
                 >
-                  {item}
+                  <a className={c.link}>{item}</a>
                 </li>
               ))}
             </ul>

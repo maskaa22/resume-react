@@ -16,12 +16,12 @@
 }
 .logo span,
 .active,
-.burger,
-.close {
-  color: #ff014f;
+.burger {
+  color: #c762e7;
 }
 .close {
   margin-top: 15px;
+  color: white;
 }
 .closeMenu {
   display: none;
@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #f7b3c8;
+  background-color: #c762e7;
   position: fixed;
   top: 0;
   left: -16px;
@@ -61,7 +61,7 @@
   text-transform: uppercase;
 }
 .item.active {
-  color: #ff014f;
+  color: #7c0c86;
 }
 
 @media only screen and (min-width: 768px) {
@@ -98,8 +98,12 @@
     text-transform: capitalize;
   }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
   .item {
     cursor: pointer;
+  }
+  .link {
+    font-size: 20px;
+    text-align: center;
   }
 }
