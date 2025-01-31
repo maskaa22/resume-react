@@ -3,6 +3,8 @@
 *::after {
   box-sizing: border-box;
 }
+/* #f6e5fa; для disable */
+/* #9b01d0 для hover */
 body {
   margin: 0;
   /* font-family: 'Gilroy', sans-serif; */
@@ -47,4 +49,6 @@ img {
   }
 }
 @media only screen and (min-width: 1024px) {
+}
+@media only screen and (min-width: 1440px) {
 }

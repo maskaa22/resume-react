@@ -15,7 +15,7 @@
   height: 25px;
 }
 .logo span,
-.active,
+/* .active, */
 .burger {
   color: #c762e7;
 }
@@ -61,7 +61,7 @@
   text-transform: uppercase;
 }
 .item.active {
-  color: #7c0c86;
+  color: #9b01d0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -105,5 +105,13 @@
   .link {
     font-size: 20px;
     text-align: center;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .logo {
+    font-size: 35px;
+  }
+  .link {
+    font-size: 24px;
   }
 }
