@@ -97,6 +97,9 @@
     color: black;
     text-transform: capitalize;
   }
+  .item:hover {
+    color: #c591d6;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .item {

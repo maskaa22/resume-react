@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 /* #f6e5fa; для disable */
-/* #9b01d0 для hover */
+/* #9b01d0 для active */
+/*#c591d6 для hover*/
 body {
   margin: 0;
   /* font-family: 'Gilroy', sans-serif; */
