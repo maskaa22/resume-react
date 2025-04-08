@@ -1,0 +1,96 @@
+.accordion {
+  text-align: center;
+  margin: 0 auto;
+  /* padding: 40px; */
+  font-family: "Cascadia Code", sans-serif;
+}
+.accordionTitle {
+  margin-bottom: 20px;
+}
+.accordionItem {
+  overflow: hidden;
+  background-color: #fff;
+  width: 250px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  border-right: 2px solid;
+  border-color: #c762e7;
+}
+.accordionItem:last-of-type {
+  border-bottom: 2px solid;
+  border-color: #c762e7;
+}
+.accordionItem:first-of-type {
+  border-top: 2px solid;
+  border-color: #c762e7;
+}
+
+.accordionHeader {
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: #c762e7;
+    color: white;
+  }
+  &.active {
+    background-color: #c762e7;
+    color: white;
+  }
+}
+
+.accordionPanel {
+  padding: 20px;
+}
+
+.info {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .accordionHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+  .accordionTitle {
+    font-size: 24px;
+  }
+  .accordionItem {
+    width: 300px;
+  }
+  .info {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .accordionItem {
+    width: 400px;
+  }
+  .info {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .accordionTitle {
+    font-size: 28px;
+  }
+  .accordionHeader {
+    font-size: 22px;
+  }
+  .info {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .text {
+    font-size: 20px;
+  }
+}
