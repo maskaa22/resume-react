@@ -3,7 +3,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 export default function About() {
   return (
-    <section className={c.about}>
+    <section className={c.about} id="about">
       <div className="container">
         <div className={c.inner}>
           <div className={c.foto}>
@@ -14,7 +14,7 @@ export default function About() {
                 ./about/about-x1.png 2x
               "
               />
-              <img src="./about/about-x1.png" alt="Mariia Skydan" />
+              <img src="./about/about-x1.png" alt="Mariia Skydan"  className={c.img}/>
             </picture>
           </div>
           <div className={c.info}>

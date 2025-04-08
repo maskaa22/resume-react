@@ -8,13 +8,12 @@ export default function Header() {
   const [activeItem, setActiveItem] = useState(false);
 
   const menuItems = [
-    "Home",
-    "About",
-    "Skills",
-    "Education",
-    "Experience",
-    "Projects",
-    "Contact",
+    "about",
+    "skills",
+    "education",
+    "experience",
+    "projects",
+    "contact",
   ];
 
   return (
@@ -33,7 +32,19 @@ export default function Header() {
             onClick={() => setIsOpen(!isOpen)}
           />
           <nav>
-            <ul className={c.list}>
+          <ul className={c.list}>
+              {menuItems.map((item, index) => (
+                <li
+                  key={index}
+                  className={c.item}
+                  onClick={() => setActiveItem(index)}
+                >
+                  <a className={`${c.link} ${activeItem === index ? c.active : ""}`} 
+                  href={`#${item}`}>{item}</a>
+                </li>
+              ))}
+            </ul>
+            {/* <ul className={c.list}>
               {menuItems.map((item, index) => (
                 <li
                   key={index}
@@ -42,10 +53,10 @@ export default function Header() {
                   }`}
                   onClick={() => setActiveItem(index)}
                 >
-                  <a className={c.link}>{item}</a>
+                  <a className={c.link} href={`#${item}`}>{item}</a>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </nav>
         </div>
       </header>

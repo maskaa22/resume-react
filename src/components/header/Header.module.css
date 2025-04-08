@@ -57,10 +57,9 @@
 }
 .item {
   padding: 20px;
-  color: white;
   text-transform: uppercase;
 }
-.item.active {
+.link.active {
   color: #9b01d0;
 }
 
