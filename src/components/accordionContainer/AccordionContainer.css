@@ -1,8 +1,6 @@
 .accordion {
   text-align: center;
   margin: 0 auto;
-  /* padding: 40px; */
-  font-family: "Cascadia Code", sans-serif;
 }
 .accordionTitle {
   margin-bottom: 20px;
@@ -21,6 +19,7 @@
 .accordionItem:last-of-type {
   border-bottom: 2px solid;
   border-color: #c762e7;
+  border-radius: 0 0 5px;
 }
 .accordionItem:first-of-type {
   border-top: 2px solid;

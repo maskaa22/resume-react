@@ -21,6 +21,7 @@
 .text {
   margin-top: 20px;
   text-align: justify;
+  letter-spacing: 0.03rem;
 }
 .text span {
   display: none;
@@ -50,6 +51,7 @@
   border-radius: 5px;
   padding: 5px 10px;
   margin-left: 20px;
+  color: #c762e7;
 }
 .social {
   margin-top: 20px;

@@ -1,4 +1,4 @@
-import { education, experience } from "../../contacts";
+import { education, experience } from "../../constants";
 import AccordionContainer from "../accordionContainer/AccordionContainer";
 import c from "./Educations.module.css";
 
