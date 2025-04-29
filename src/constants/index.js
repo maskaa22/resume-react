@@ -1,0 +1,106 @@
+export const education = [
+  {
+    id: 1,
+    title: "IT School GoIT",
+    data: "2024 - now",
+    name: "Fullstack Developer",
+    text: "Lorem sfsdf sdf sdf s dsf sd ",
+  },
+  {
+    id: 2,
+    title: "IT courses by Okten School",
+    data: "2023",
+    name: "Frontend Developer",
+    text: "Lorem sfsdf sdf sdf s dsf sd ",
+  },
+  {
+    id: 3,
+    title: "Ostrogradskyi National University of Kremenchuk",
+    data: "2013 - 2018",
+    name: "Computer Science, Master's Degree",
+    text: "Lorem sfsdf sdf sdf s dsf sd ",
+  },
+];
+
+export const experience = [
+  {
+    id: 1,
+    title: "Security Police",
+    data: "2017 - 2021",
+    name: "Technical security engineer",
+    text: "Learned to set priorities and work for everyone correctly.",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Landing - 'Portfolio'",
+    data: "2025",
+    skills: ["#js", "#html", "#css"],
+    url: "https://dimabarbara.github.io/project-WebGuru/",
+    foto: "./projects/full-stack.png",
+    alt: "Portfolio",
+    text: "Portfolio site. Role: developer. Pair work on the section about us.",
+  },
+  {
+    id: 2,
+    title: "Landing - 'Watcharm'",
+    data: "2024",
+    skills: ["#html", "#css"],
+    url: "https://maskaa22.github.io/perfect-developers/",
+    foto: "./projects/watcharm.png",
+    alt: "Watcharm",
+    text: "A website with a responsive layout. Role: Team Lead, developer. Build a project on Git Hub, check for build errors, live page performance, and coding header.",
+  },
+  {
+    id: 3,
+    title: "Website - 'Olena Studio'",
+    data: "2023",
+    skills: ["#react", "#node", "#redux", "#mongo", "#chart"],
+    url: "https://o-react.vercel.app/",
+    foto: "./projects/olena-studio.png",
+    alt: "Olena Studio",
+    text: "Full stack website. Role: full stack developer Logining, salon appointment, products buy, etc. Separate admin account with setting products and more. Also, the site has an analysis for the administrator using React Chart. The documentation is written by Swagger.",
+  },
+  {
+    id: 4,
+    title: "Website - 'Ulia Ushenko'",
+    data: "2023",
+    skills: ["#react", "#node", "#redux", "#mongo", "#chart"],
+    url: "https://ulia-ushenko.vercel.app/",
+    foto: "./projects/ulia-ushenko.png",
+    alt: "Ulia Ushenko",
+    text: "Full stack website. FrontEnd is written in the React and BackEnd in the Node. Mongo was used as a database.",
+  },
+  {
+    id: 5,
+    title: "Landing - 'Natural Forest'",
+    data: "2023",
+    skills: ["#react", "#node"],
+    url: "https://forest-site.vercel.app/",
+    foto: "./projects/natural-forest.png",
+    alt: "Natural Forest",
+    text: "This site is written on React. The interesting thing about this project is the 3D main screen. By moving the mouse over the screen, you can view this structure more comprehensively.",
+  },
+  {
+    id: 6,
+    title: "3D - model website",
+    data: "2023",
+    skills: ["#react", "#node"],
+    url: "https://3d-model-website-ten.vercel.app/",
+    foto: "./projects/3-d-model.png",
+    alt: "3D",
+    text: "Written on React using 3D models. On the main window, there is an interactive menu in the form of a star system, and you can go to other pages when scrolling around.",
+  },
+  {
+    id: 7,
+    title: "Landing - 'Hoo bank'",
+    data: "2023",
+    skills: ["#react", "#node"],
+    url: "https://bank-system-weld.vercel.app/",
+    foto: "./projects/hoo-bank.png",
+    alt: "Hoo bank",
+    text: "Written on React using Tailwind css. A simple landing site that talks about banking opportunities. The main advantage is the use of a new library css.",
+  }
+];

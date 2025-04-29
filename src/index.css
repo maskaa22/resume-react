@@ -51,12 +51,13 @@ img {
 }
 @media only screen and (min-width: 1024px) {
   .container {
-    padding: 0 56px;
+    padding: 0 72px;
   }
 }
+/* 1280 */
 @media only screen and (min-width: 1440px) {
   .container {
-    padding: 0 72px;
+    padding: 0 90px;
   }
 }
 
@@ -75,3 +76,5 @@ img {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+
