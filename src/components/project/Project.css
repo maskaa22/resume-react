@@ -2,7 +2,7 @@
   background-color: #fff;
 }
 .infoProject {
-  height: 280px;
+  height: 340px;
 }
 .titleProject {
   margin-bottom: 20px;
@@ -48,6 +48,7 @@
 @media only screen and (min-width: 768px) {
   .infoProject {
     margin-bottom: 24px;
+    height: 320px;
   }
   .titleProject {
     font-size: 24px;

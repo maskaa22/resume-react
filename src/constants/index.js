@@ -61,7 +61,7 @@ export const projects = [
     url: "https://o-react.vercel.app/",
     foto: "./projects/olena-studio.png",
     alt: "Olena Studio",
-    text: "Full stack website. Role: full stack developer Logining, salon appointment, products buy, etc. Separate admin account with setting products and more. Also, the site has an analysis for the administrator using React Chart. The documentation is written by Swagger.",
+    text: "Full stack website. Logining, salon appointment, products buy, etc. Separate admin account with setting products and more. Also, the site has an analysis for the administrator using React Chart. The documentation is written by Swagger.",
   },
   {
     id: 4,
