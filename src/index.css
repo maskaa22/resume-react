@@ -6,6 +6,9 @@
 /* #f6e5fa; для disable */
 /* #9b01d0 для active */
 /*#c591d6 для hover*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   /* font-family: 'Gilroy', sans-serif; */

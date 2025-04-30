@@ -44,6 +44,7 @@
 }
 .talk {
   font-size: 15px;
+  font-family: Times new Romans;
   letter-spacing: 0.03em;
   background: linear-gradient(to right, transparent 50%, #c762e7 50%);
   background-size: 200% 100%;

@@ -23,8 +23,10 @@ export default function Hero() {
             </span>
           </p>
           <div className={c.buttonContainer}>
-            <button className={c.download}>Download Resume</button>
-            <button className={c.talk}>Contact Me</button>
+            <a href="/files/MarriaSkydan_FullStack.pdf" download className={c.download}>
+              Download Resume
+            </a>
+            <a className={c.talk} href="#contact">Contact Me</a>
           </div>
           <ul className={c.social}>
             <li>

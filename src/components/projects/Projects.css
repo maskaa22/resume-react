@@ -13,6 +13,8 @@
   margin-top: 10px;
 }
 
+
+
 .btn-next,
 .btn-prev {
   border: 1px solid #c762e7;
@@ -42,6 +44,16 @@
   .title {
     margin-bottom: 50px;
     font-size: 42px;
+  }
+  .btn-next:hover, .btn-prev:hover {
+    background-color: #d3a5e1;
+    color: white;
+    border-color: #d3a5e1;
+  }
+  .proj-btn-disabled:hover {
+    color: #f6e5fa;
+    background-color: transparent;
+    border: 1px solid #f6e5fa;
   }
 }
 @media only screen and (min-width: 1440px) {

@@ -14,29 +14,47 @@ export default function About() {
                 ./about/about-x1.png 2x
               "
               />
-              <img src="./about/about-x1.png" alt="Mariia Skydan"  className={c.img}/>
+              <img
+                src="./about/about-x1.png"
+                alt="Mariia Skydan"
+                className={c.img}
+              />
             </picture>
           </div>
           <div className={c.info}>
             <h2 className={c.title}>About me</h2>
             <p className={c.text}>
-              Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa
-              nibh lectus netus in. Aliquet donec morbi convallis pretium.
-              Turpis tempus pharetra
+              My name is Maria, I’m 29 years old. I enjoy fishing, foraging
+              mushrooms, and coding for hours on end. I'm highly motivated,
+              detail-oriented, and always eager to learn and take on new
+              challenges. I don't give up easily and stay focused until the job
+              is done.
             </p>
             <ul className={c.list}>
-              <li className={c.item}> <IoMdCheckmarkCircleOutline  className={c.icon}/>
-                Develop highly interactive Front end <span>/ User Interfaces for the
-                web</span>
+              <li className={c.item}>
+                <IoMdCheckmarkCircleOutline className={c.icon} />
+                Build interactive web interfaces
+                <span>/ User Interfaces for the web</span>
               </li>
-              <li className={c.item}><IoMdCheckmarkCircleOutline  className={c.icon}/>
-                Progressive Web Applications ( PWA ) <span>in normal and SPA Stacks</span>
+              <li className={c.item}>
+                <IoMdCheckmarkCircleOutline className={c.icon} />
+                Create data visualizations
+                <span>with Chart.js and Recharts</span>
               </li>
-              <li className={c.item}><IoMdCheckmarkCircleOutline  className={c.icon}/>
-                Integration of third party services such as AWS <span>/ Digital Ocean</span>
+              <li className={c.item}>
+                <IoMdCheckmarkCircleOutline className={c.icon} />
+                Document and RESTful APIs
+                <span>using Swagger and Postman</span>
               </li>
-              <li className={c.item}><IoMdCheckmarkCircleOutline  className={c.icon}/>
-                Integration of payment services <span>such as M-Pesa and paypal etc</span>
+              <li className={c.item}>
+                <IoMdCheckmarkCircleOutline className={c.icon} />
+                Integration of payment services
+                <span>(test-services) such as Stripe</span>
+              </li>
+              <li className={c.item}>
+                <IoMdCheckmarkCircleOutline className={c.icon} />
+                Develop back-end services
+                <span>with Node.js and Express</span>
               </li>
             </ul>
           </div>
