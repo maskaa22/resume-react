@@ -1,9 +1,13 @@
+.headerContainer {
+  background-color: #f7f7f7;
+}
 .header {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
   align-items: center;
   position: relative;
+  
 }
 .logo {
   font-family: "Dancing Script", serif;

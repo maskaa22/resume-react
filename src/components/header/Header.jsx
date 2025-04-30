@@ -16,6 +16,9 @@ export default function Header() {
   ];
 
   return (
+    <div className={c.headerContainer}>
+
+    
     <div className="container">
       <header className={c.header}>
         <div className={c.logo}>
@@ -46,6 +49,7 @@ export default function Header() {
           </nav>
         </div>
       </header>
+    </div>
     </div>
   );
 }
