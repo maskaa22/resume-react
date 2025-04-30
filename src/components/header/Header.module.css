@@ -65,7 +65,8 @@
 .link {
   color: #c762e7;
 }
-.link.active {
+
+.link.active, .link:hover {
   color: #9b01d0;
 }
 
