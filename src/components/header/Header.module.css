@@ -58,6 +58,9 @@
   padding: 20px;
   text-transform: uppercase;
 }
+link {
+  color: #c762e7;
+}
 .link.active {
   color: #9b01d0;
 }
