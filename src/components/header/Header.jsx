@@ -10,7 +10,6 @@ export default function Header() {
   const menuItems = [
     "about",
     "skills",
-    "education",
     "experience",
     "projects",
     "contact",
@@ -44,19 +43,6 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            {/* <ul className={c.list}>
-              {menuItems.map((item, index) => (
-                <li
-                  key={index}
-                  className={`${c.item} ${
-                    activeItem === index ? c.active : ""
-                  }`}
-                  onClick={() => setActiveItem(index)}
-                >
-                  <a className={c.link} href={`#${item}`}>{item}</a>
-                </li>
-              ))}
-            </ul> */}
           </nav>
         </div>
       </header>

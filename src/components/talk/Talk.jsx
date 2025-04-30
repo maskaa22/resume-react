@@ -2,7 +2,7 @@ import c from "./Talk.module.css";
 
 export default function Talk() {
   return (
-    <section id="talk" className={c.talk}>
+    <section id="contact" className={c.talk}>
       <div className="container">
         <div>
           <h2 className={c.title}>Lets create Website - Together</h2>

@@ -1,0 +1,76 @@
+.topFooter {
+  background-color: rgb(247 247 247);
+  padding: 40px 0 20px;
+}
+.botFooter {
+  background-color: #545454;
+  padding: 20px 0;
+}
+
+.logo {
+  font-family: "Dancing Script", serif;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.copy span {
+  font-family: "Dancing Script", serif;
+  font-size: 18px;
+}
+
+.logo span,
+.copy span > span {
+  color: #c762e7;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+  border: 1px solid #c762e7;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #c762e7;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.social {
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+}
+.copy {
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (min-width: 1440px) {
+  .logo {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+  .topFooter {
+    padding: 40px 0;
+  }
+  .menu {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+  .copy {
+    font-size: 16px;
+  }
+  .copy span {
+    font-size: 20px;
+  }
+}
