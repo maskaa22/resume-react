@@ -26,12 +26,28 @@ export default function Hero() {
             <button className={c.download}>Download Resume</button>
             <button className={c.talk}>Contact Me</button>
           </div>
-          <div className={c.social}>
-            <FiGithub className={c.icon}/>
-            <FiLinkedin className={c.icon}/>
-            <MdOutlineMail className={c.icon}/>
-            <PiTelegramLogoLight className={c.icon}/>
-          </div>
+          <ul className={c.social}>
+            <li>
+              <a href="https://github.com/maskaa22">
+                <FiGithub className={c.icon} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mariia-skydan">
+                <FiLinkedin className={c.icon} />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:kyrosika565@gmail.com">
+                <MdOutlineMail className={c.icon} />
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/maskaa22">
+                <PiTelegramLogoLight className={c.icon} />
+              </a>
+            </li>
+          </ul>
         </div>
         <div className={c.foto}>
           <picture>

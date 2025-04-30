@@ -6,7 +6,7 @@ import c from "./Educations.module.css";
 
 export default function Educations() {
   return (
-    <section id="education" className={c.education}>
+    <section id="experience" className={c.education}>
       <div className="container">
         <h2 className={c.title}>Experience</h2>
 
