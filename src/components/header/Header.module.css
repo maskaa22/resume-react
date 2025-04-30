@@ -58,7 +58,7 @@
   padding: 20px;
   text-transform: uppercase;
 }
-link {
+.link {
   color: #c762e7;
 }
 .link.active {
