@@ -2,7 +2,7 @@ export const education = [
   {
     id: 1,
     title: "IT School GoIT",
-    data: "2024 - now",
+    data: "2024 - 2025",
     name: "Fullstack Developer",
     text: "Improved clean code practices and gained team experience as both a developer and team lead. Learned to build back-end services and manage full-stack project development.",
   },
@@ -23,8 +23,22 @@ export const education = [
 ];
 
 export const experience = [
-  {
+    {
     id: 1,
+    title: "Pythons Team",
+    data: "2025 - now",
+    name: "Frontend Developer",
+    text: "Working as part of a team, writing code, and carrying out assigned tasks.",
+  },
+    {
+    id: 2,
+    title: "VerbUp",
+    data: "2025 - now",
+    name: "Frontend Developer",
+    text: "Lead on the front-end, code review and debugging, and writing your own code.",
+  },
+  {
+    id: 3,
     title: "Security Police",
     data: "2017 - 2021",
     name: "Technical security engineer",
@@ -33,8 +47,28 @@ export const experience = [
 ];
 
 export const projects = [
-  {
+    {
     id: 1,
+    title: "Sweetopia",
+    data: "2026-now",
+    skills: ["#react", "#scss"],
+    url: "https://sweetopia-flame.vercel.app/",
+    foto: "./projects/sweetopia.png",
+    alt: "Sweetopia",
+    text: "A landing page about sweets, featuring animations and generated images, is currently under development. It is being created using AI.",
+  },
+    {
+    id: 2,
+    title: "VerbUp'",
+    data: "2025-now",
+    skills: ["#react", "#scss", "#redux", "#canvas"],
+    url: "https://verbup-fe.vercel.app/",
+    foto: "./projects/verbUp.png",
+    alt: "VerbUp",
+    text: "A web application for learning irregular English verbs through games. The app is still under development, but already features a wide range of functions, such as registration, a personal dashboard, score tracking, a choice of difficulty levels and more.",
+  },
+  {
+    id: 3,
     title: "Landing - 'Portfolio'",
     data: "2025",
     skills: ["#js", "#html", "#css"],
@@ -44,7 +78,7 @@ export const projects = [
     text: "Portfolio site. Role: Developer. Collaborated on the 'About Us' section as part of a pair programming effort. Conducted thorough code reviews to ensure consistency and quality, assisted in the development of other sections, and actively participated in debugging and optimization code and images tasks to improve site performance.",
   },
   {
-    id: 2,
+    id: 4,
     title: "Landing - 'Watcharm'",
     data: "2024",
     skills: ["#html", "#css"],
@@ -54,7 +88,7 @@ export const projects = [
     text: "A responsive website built with attention to layout and performance. Role: Team Lead & Developer. Responsible for project setup on GitHub, checking build errors, monitoring live page performance, and developing the header component. Also contributed to team coordination, code reviews, and deployment process.",
   },
   {
-    id: 3,
+    id: 5,
     title: "Website - 'Olena Studio'",
     data: "2023",
     skills: ["#react", "#node", "#redux", "#mongo", "#chart"],
@@ -64,7 +98,7 @@ export const projects = [
     text: "Full stack website. Logining, salon appointment, products buy, etc. Separate admin account with setting products and more. Also, the site has an analysis for the administrator using React Chart. The documentation is written by Swagger.",
   },
   {
-    id: 4,
+    id: 6,
     title: "Website - 'Ulia Ushenko'",
     data: "2023",
     skills: ["#react", "#node", "#redux", "#mongo"],
@@ -74,7 +108,7 @@ export const projects = [
     text: "Full-stack website. Front-end developed using React, back-end built with Node.js, and MongoDB used as the database. The platform features an admin panel for a poet to upload and manage poems, with functionality for registered users to rate and comment on the poems.",
   },
   {
-    id: 5,
+    id: 7,
     title: "Landing - 'Natural Forest'",
     data: "2024",
     skills: ["#react", "#css"],
@@ -84,7 +118,7 @@ export const projects = [
     text: "This site is built with React. A key feature of the project is the interactive 3D main screen, where users can explore the structure more comprehensively by moving the mouse. The project also includes smooth animations, responsive design, and optimized performance for seamless user experience across different devices.",
   },
   {
-    id: 6,
+    id: 8,
     title: "3D - model website",
     data: "2023",
     skills: ["#react", "#three_fiber", "#tailwind_css"],
@@ -94,7 +128,7 @@ export const projects = [
     text: "Written in React using 3D models. The main window features an interactive menu designed as a star system, where users can navigate to other pages by scrolling. The project incorporates smooth transitions, engaging animations, and dynamic content that responds to user interaction for a unique browsing experience.",
   },
   {
-    id: 7,
+    id: 9,
     title: "Landing - 'Hoo bank'",
     data: "2023",
     skills: ["#react", "#tailwind_css"],
@@ -104,7 +138,7 @@ export const projects = [
     text: "Written in React using Tailwind CSS. A simple landing page that highlights banking opportunities. The main advantage is the use of a new CSS library, providing a clean, modern design with highly customizable components for a responsive user experience. The site is optimized for fast load times and seamless navigation.",
   },
   {
-    id: 8,
+    id: 10,
     title: "Landing - 'Hoo bank'",
     data: "2023",
     skills: ["#react", "#node"],
