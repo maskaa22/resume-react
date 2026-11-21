@@ -148,3 +148,96 @@ export const projects = [
     text: "Written in React using Tailwind CSS. A simple landing page that highlights banking opportunities. The main advantage is the use of a new CSS library, providing a clean, modern design with highly customizable components for a responsive user experience. The site is optimized for fast load times and seamless navigation.",
   }
 ];
+
+
+export const navItems = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+];
+
+export const heroTools = ["React", "Node.js", "TypeScript", "JavaScript", "Figma"];
+
+export const skillsTape = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Redux",
+  "Figma",
+  "Swagger",
+  "HTML",
+  "CSS",
+];
+
+export const services = [
+  {
+    id: 1,
+    title: "Interactive interfaces",
+    text: "User interfaces for the web — responsive, animated and pleasant to use.",
+    tags: ["React", "CSS", "Figma"],
+  },
+  {
+    id: 2,
+    title: "Data visualizations",
+    text: "Dashboards and charts that make numbers easy to read.",
+    tags: ["Chart.js", "Recharts"],
+  },
+  {
+    id: 3,
+    title: "Documented REST APIs",
+    text: "Clear endpoints with docs your team can actually use.",
+    tags: ["Swagger", "Postman"],
+  },
+  {
+    id: 4,
+    title: "Payment integration",
+    text: "Checkout flows connected to payment services (test mode).",
+    tags: ["Stripe"],
+  },
+  {
+    id: 5,
+    title: "Back-end services",
+    text: "Server logic, auth and databases behind the screens.",
+    tags: ["Node.js", "Express", "MongoDB"],
+  },
+  {
+    id: 6,
+    title: "Teamwork & code review",
+    text: "Team lead experience, careful reviews, debugging and shared standards.",
+    tags: ["Git", "Review", "Lead"],
+  },
+];
+
+export const contacts = [
+  {
+    id: "email",
+    label: "E-mail",
+    value: "kyrosika565@gmail.com",
+    href: "mailto:kyrosika565@gmail.com",
+  },
+  {
+    id: "telegram",
+    label: "Telegram",
+    value: "@maskaa22",
+    href: "https://t.me/maskaa22",
+  },
+  {
+    id: "github",
+    label: "GitHub",
+    value: "github.com/maskaa22",
+    href: "https://github.com/maskaa22",
+  },
+  {
+    id: "linkedin",
+    label: "LinkedIn",
+    value: "in/mariia-skydan",
+    href: "https://www.linkedin.com/in/mariia-skydan",
+  },
+];
+
+export const projectTypes = ["Website", "Web app", "Full stack", "Something else"];

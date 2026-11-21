@@ -1,55 +1,105 @@
+import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
+import { FiArrowUpRight } from "react-icons/fi";
+import { navItems } from "../../constants";
 import c from "./Header.module.css";
-import { useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(false);
+  const [active, setActive] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
-  const menuItems = [
-    "about",
-    "skills",
-    "experience",
-    "projects",
-    "contact",
-  ];
+  // highlight the section that is currently on screen
+  useEffect(() => {
+    const sections = navItems
+      .map((item) => document.getElementById(item.id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+    sections.forEach((s) => observer.observe(s));
+
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24);
+      if (window.scrollY < 200) setActive("");
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  // lock page scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  const close = () => setIsOpen(false);
 
   return (
-    <div className={c.headerContainer}>
+    <header className={`${c.wrap} ${scrolled ? c.scrolled : ""}`}>
+      <div className="container">
+        <div className={c.bar}>
+          <a href="#hero" className={c.logo} aria-label="Mariia Skydan — home">
+            <span className={c.mark}>MS</span>
+            <span className={c.divider} />
+            <span className={c.logoText}>Portfolio</span>
+          </a>
 
-    
-    <div className="container">
-      <header className={c.header}>
-        <div className={c.logo}>
-          <span>M</span>ariia <span>S</span>kydan
-        </div>
-        <RxHamburgerMenu
-          className={c.burger}
-          onClick={() => setIsOpen(!isOpen)}
-        />
-        <div className={`${c.menu} ${isOpen ? c.open : ""}`}>
-          <IoIosCloseCircleOutline
-            className={c.close}
-            onClick={() => setIsOpen(!isOpen)}
-          />
-          <nav>
-          <ul className={c.list}>
-              {menuItems.map((item, index) => (
-                <li
-                  key={index}
-                  className={c.item}
-                  onClick={() => setActiveItem(index)}
-                >
-                  <a className={`${c.link} ${activeItem === index ? c.active : ""}`} 
-                  href={`#${item}`}>{item}</a>
+          <nav
+            className={`${c.menu} ${isOpen ? c.open : ""}`}
+            aria-label="Main"
+          >
+            <button
+              type="button"
+              className={c.close}
+              onClick={close}
+              aria-label="Close menu"
+            >
+              <IoClose />
+            </button>
+            <ul className={c.list}>
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <a
+                    className={`${c.link} ${active === item.id ? c.active : ""}`}
+                    href={`#${item.id}`}
+                    onClick={close}
+                  >
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>
+            <a href="#contact" className={c.cta} onClick={close}>
+              Let’s talk <FiArrowUpRight />
+            </a>
           </nav>
+
+          <button
+            type="button"
+            className={c.burger}
+            onClick={() => setIsOpen(true)}
+            aria-label="Open menu"
+            aria-expanded={isOpen}
+          >
+            <RxHamburgerMenu />
+          </button>
         </div>
-      </header>
-    </div>
-    </div>
+      </div>
+    </header>
   );
 }

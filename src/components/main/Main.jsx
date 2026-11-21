@@ -1,20 +1,19 @@
-import "./Main.module.css";
 import Hero from "../hero/Hero";
 import About from "../about/About";
 import Skills from "../skills/Skills";
-import Educations from "../educations/Educations";
+import Timeline from "../timeline/Timeline";
 import Projects from "../projects/Projects";
 import Talk from "../talk/Talk";
 
 export default function Main() {
   return (
-    <>
+    <main>
       <Hero />
       <About />
       <Skills />
-      <Educations/>
+      <Timeline />
       <Projects />
       <Talk />
-    </>
+    </main>
   );
 }

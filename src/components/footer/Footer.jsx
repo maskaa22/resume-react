@@ -1,59 +1,82 @@
-import c from "./Footer.module.css";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
 import { PiTelegramLogoLight } from "react-icons/pi";
+import { contacts, navItems } from "../../constants";
+import c from "./Footer.module.css";
 
 export default function Footer() {
   return (
     <footer className={c.footer}>
-      <div className={c.topFooter}>
-        <div className="container">
-          <div className={c.logo}>
-            <span>M</span>ariia <span>S</span>kydan
+      <div className="container">
+        <div className={c.top}>
+          <div className={c.brand}>
+            <a href="#hero" className={c.logo}>
+              Mariia <em>Skydan</em>
+            </a>
+            <p className={c.tagline}>
+              Full Stack Developer building thoughtful, fast and friendly web
+              products.
+            </p>
+            <ul className={c.social}>
+              <li>
+                <a href="https://github.com/maskaa22" aria-label="GitHub">
+                  <FiGithub />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/mariia-skydan"
+                  aria-label="LinkedIn"
+                >
+                  <FiLinkedin />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:kyrosika565@gmail.com" aria-label="E-mail">
+                  <MdOutlineMail />
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/maskaa22" aria-label="Telegram">
+                  <PiTelegramLogoLight />
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <ul className={c.menu}>
-            <li>about</li>
-            <li>skills</li>
-            <li>experience</li>
-            <li>projects</li>
-            <li>contact</li>
-          </ul>
+          <nav className={c.col} aria-label="Footer">
+            <h4>Navigation</h4>
+            <ul>
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <a href={`#${item.id}`}>{item.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-          <ul className={c.social}>
-            <li>
-              <a href="https://github.com/maskaa22">
-                <FiGithub className={c.icon} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/mariia-skydan">
-                <FiLinkedin className={c.icon} />
-              </a>
-            </li>
-            <li>
-              <a href="mailto:kyrosika565@gmail.com">
-                <MdOutlineMail className={c.icon} />
-              </a>
-            </li>
-            <li>
-              <a href="https://t.me/maskaa22">
-                <PiTelegramLogoLight className={c.icon} />
-              </a>
-            </li>
-          </ul>
+          <div className={c.col}>
+            <h4>Contact</h4>
+            <ul>
+              {contacts.map((item) => (
+                <li key={item.id}>
+                  <a href={item.href}>{item.value}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className={c.bottom}>
+          <p>
+            © {new Date().getFullYear()} Mariia Skydan. All rights reserved.
+          </p>
+          <a href="#hero">Back to top ↑</a>
         </div>
       </div>
-      <div className={c.botFooter}>
-        <div className="container">
-          <p className={c.copy}>
-            © 2025{" "}
-            <span>
-              <span>M</span>ariia <span>S</span>kydan
-            </span>{" "}
-            All Rights Reserved, Inc.
-          </p>
-        </div>
+
+      <div className={c.watermark} aria-hidden="true">
+        Mariia Skydan
       </div>
     </footer>
   );
