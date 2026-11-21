@@ -16,8 +16,8 @@ export default function Skills() {
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             <span className="eyebrow">What I do</span>
             <h2 className="sectionTitle" style={{ maxWidth: "none" }}>
-              Everything a web
-              <br />
+              Everything a web{" "}
+              <br className="titleBreak" />
               product <em>needs</em>
             </h2>
           </div>

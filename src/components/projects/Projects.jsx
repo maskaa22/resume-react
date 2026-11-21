@@ -45,8 +45,8 @@ export default function Projects() {
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             <span className="eyebrow">Projects</span>
             <h2 className="sectionTitle" style={{ maxWidth: "none" }}>
-              Things I’ve <em>built</em>
-              <br />
+              Things I’ve <em>built</em>{" "}
+              <br className="titleBreak" />
               and shipped
             </h2>
           </div>

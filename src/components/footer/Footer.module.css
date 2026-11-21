@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  margin-top: 96px;
+  margin-top: var(--section-pad);
   padding-top: 64px;
   overflow: hidden;
   border-top: 1px solid var(--line);
@@ -102,9 +102,23 @@
   pointer-events: none;
 }
 
-@media (min-width: 800px) {
+/* tablet: brand on top, Navigation + Contact side by side */
+@media (min-width: 600px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 48px;
+  }
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+/* desktop: brand + two columns in one row */
+@media (min-width: 900px) {
   .top {
     grid-template-columns: 1.6fr 1fr 1fr;
     gap: 64px;
+  }
+  .brand {
+    grid-column: auto;
   }
 }

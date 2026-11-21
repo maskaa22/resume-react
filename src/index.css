@@ -23,6 +23,8 @@
   --radius: 28px;
   --radius-sm: 18px;
   --header-h: 84px;
+  /* vertical padding of every section: the gap between two sections is 2x this */
+  --section-pad: 44px;
 }
 
 *,
@@ -131,12 +133,12 @@ img {
 }
 
 .section {
-  padding: 96px 0;
+  padding: var(--section-pad) 0;
   position: relative;
 }
 @media (min-width: 1024px) {
-  .section {
-    padding: 128px 0;
+  :root {
+    --section-pad: 96px;
   }
 }
 
@@ -189,6 +191,16 @@ img {
   line-height: 0.98;
   letter-spacing: -0.015em;
   max-width: 14ch;
+}
+/* tablet: section titles stay on one line (the manual line breaks are dropped).
+   !important beats the per-heading max-width set inline. */
+@media (min-width: 600px) and (max-width: 899px) {
+  .sectionTitle {
+    max-width: none !important;
+  }
+  .titleBreak {
+    display: none;
+  }
 }
 .sectionTitle em {
   font-style: italic;

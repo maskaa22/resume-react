@@ -4,14 +4,20 @@ export const education = [
     title: "IT School GoIT",
     data: "2024 - 2025",
     name: "Fullstack Developer",
-    text: "Improved clean code practices and gained team experience as both a developer and team lead. Learned to build back-end services and manage full-stack project development.",
+    text: [
+      "Improved clean code practices and gained team experience as both a developer and team lead.",
+      "Learned to build back-end services and manage full-stack project development.",
+    ],
   },
   {
     id: 2,
     title: "IT courses by Okten School",
     data: "2023",
     name: "Frontend Developer",
-    text: "Strengthened programming fundamentals by building a pet project and working with Figma for UI design. Gained practical experience in front-end workflows and independent problem-solving.",
+    text: [
+      "Strengthened programming fundamentals by building a pet project and working with Figma for UI design.",
+      "Gained practical experience in front-end workflows and independent problem-solving.",
+    ],
   },
   {
     id: 3,
@@ -28,14 +34,21 @@ export const experience = [
     title: "Pythons Team",
     data: "2025 - Oct 2026",
     name: "Frontend Developer",
-    text: "Worked as part of a team, writing code, and carrying out assigned tasks.",
+    text: [
+      "Developed responsive landing pages for advertising campaigns, from scratch and based on existing designs.",
+      "Built and maintained web applications using Next.js and React.",
+      "Integrated frontend applications with backend services and APIs within a microservices-based architecture.",
+      "Worked with Figma designs to implement pixel-accurate, responsive interfaces.",
+      "Collaborated with the development team using Git, participated in code reviews, and maintained code quality.",
+      "Improved existing code and optimized application performance and maintainability.",
+    ],
   },
     {
     id: 2,
     title: "VerbUp",
     data: "2025 - now",
     name: "Frontend Developer (part-time)",
-    text: "Lead on the front-end, code review and debugging, and writing your own code.",
+    text: "Worked as a Frontend Developer on an educational web platform focused on making English vocabulary learning interactive and engaging. Responsible for frontend development, implementing core application features, building interactive learning experiences, managing application state, and integrating backend services. Contributed to the product's functionality, user experience, and ongoing development.",
   },
   {
     id: 3,

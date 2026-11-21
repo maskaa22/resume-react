@@ -16,7 +16,15 @@ function Column({ title, items }) {
               <span className={c.date}>{item.data}</span>
               <h4 className={c.name}>{item.title}</h4>
               <p className={c.role}>{item.name}</p>
-              <p className={c.text}>{item.text}</p>
+              {Array.isArray(item.text) ? (
+                <ul className={c.bullets}>
+                  {item.text.map((line) => (
+                    <li key={line}>{line}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className={c.text}>{item.text}</p>
+              )}
             </article>
           </Reveal>
         ))}

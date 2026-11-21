@@ -22,6 +22,7 @@ export default function Hero() {
 
           <motion.p className={c.role} {...rise(0.2)}>
             Full Stack Developer
+            <span className={`eyebrow ${c.status}`}>Open to work</span>
           </motion.p>
 
           <motion.p className={c.text} {...rise(0.28)}>
@@ -83,10 +84,6 @@ export default function Hero() {
               })}
             </ul>
           </motion.div>
-
-          <motion.p className={`eyebrow ${c.status}`} {...rise(0.45)}>
-            Open to work
-          </motion.p>
         </div>
       </div>
     </section>
