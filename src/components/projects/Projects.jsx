@@ -44,8 +44,10 @@ export default function Projects() {
         <Reveal className="sectionHead split">
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             <span className="eyebrow">Projects</span>
-            <h2 className="sectionTitle" style={{ maxWidth: "12ch" }}>
-              Things I’ve <em>built</em> and shipped
+            <h2 className="sectionTitle" style={{ maxWidth: "none" }}>
+              Things I’ve <em>built</em>
+              <br />
+              and shipped
             </h2>
           </div>
 

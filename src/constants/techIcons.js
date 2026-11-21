@@ -7,7 +7,11 @@ import {
   SiMongodb,
   SiSwagger,
   SiExpress,
+  SiDocker,
+  SiPostgresql,
+  SiGit,
 } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 
 export const techIcons = {
   React: SiReact,
@@ -18,4 +22,8 @@ export const techIcons = {
   MongoDB: SiMongodb,
   Swagger: SiSwagger,
   Express: SiExpress,
+  Docker: SiDocker,
+  PostgreSQL: SiPostgresql,
+  Git: SiGit,
+  "REST APIs": TbApi,
 };

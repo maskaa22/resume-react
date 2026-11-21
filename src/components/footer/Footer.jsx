@@ -1,6 +1,4 @@
-import { FiGithub, FiLinkedin } from "react-icons/fi";
-import { MdOutlineMail } from "react-icons/md";
-import { PiTelegramLogoLight } from "react-icons/pi";
+import Icon from "../icon/Icon";
 import { contacts, navItems } from "../../constants";
 import c from "./Footer.module.css";
 
@@ -20,7 +18,7 @@ export default function Footer() {
             <ul className={c.social}>
               <li>
                 <a href="https://github.com/maskaa22" aria-label="GitHub">
-                  <FiGithub />
+                  <Icon name="github" />
                 </a>
               </li>
               <li>
@@ -28,17 +26,17 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/mariia-skydan"
                   aria-label="LinkedIn"
                 >
-                  <FiLinkedin />
+                  <Icon name="linkedin" />
                 </a>
               </li>
               <li>
                 <a href="mailto:kyrosika565@gmail.com" aria-label="E-mail">
-                  <MdOutlineMail />
+                  <Icon name="mail" />
                 </a>
               </li>
               <li>
                 <a href="https://t.me/maskaa22" aria-label="Telegram">
-                  <PiTelegramLogoLight />
+                  <Icon name="telegram" />
                 </a>
               </li>
             </ul>

@@ -26,15 +26,15 @@ export const experience = [
     {
     id: 1,
     title: "Pythons Team",
-    data: "2025 - now",
+    data: "2025 - Oct 2026",
     name: "Frontend Developer",
-    text: "Working as part of a team, writing code, and carrying out assigned tasks.",
+    text: "Worked as part of a team, writing code, and carrying out assigned tasks.",
   },
     {
     id: 2,
     title: "VerbUp",
     data: "2025 - now",
-    name: "Frontend Developer",
+    name: "Frontend Developer (part-time)",
     text: "Lead on the front-end, code review and debugging, and writing your own code.",
   },
   {
@@ -151,14 +151,24 @@ export const projects = [
 
 
 export const navItems = [
-  { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
 ];
 
-export const heroTools = ["React", "Node.js", "TypeScript", "JavaScript", "Figma"];
+export const heroTools = [
+  "React",
+  "Node.js",
+  "TypeScript",
+  "JavaScript",
+  "Figma",
+  "Docker",
+  "PostgreSQL",
+  "MongoDB",
+  "REST APIs",
+  "Git",
+];
 
 export const skillsTape = [
   "JavaScript",
@@ -239,5 +249,3 @@ export const contacts = [
     href: "https://www.linkedin.com/in/mariia-skydan",
   },
 ];
-
-export const projectTypes = ["Website", "Web app", "Full stack", "Something else"];

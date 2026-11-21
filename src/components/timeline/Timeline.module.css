@@ -1,10 +1,15 @@
+.timeline {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
 .cols {
   display: grid;
   gap: 64px;
 }
 .colTitle {
   margin-bottom: 28px;
-  font-size: 38px;
+  font-size: 44px;
   color: var(--ink);
 }
 

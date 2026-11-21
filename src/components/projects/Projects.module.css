@@ -1,3 +1,8 @@
+.projects {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;

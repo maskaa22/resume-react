@@ -1,0 +1,91 @@
+/* Spotlight card.
+   Pointer position comes from --x / --y / --xp set by a parent
+   (see useGlowPointer). Backgrounds use `fixed` attachment so the gradient is
+   positioned in viewport coordinates — the same space as the pointer. */
+.glow {
+  --glow-base: 24;
+  --glow-spread: -55;
+  --glow-size: 240px;
+  --glow-ring: 2px;
+  --hue: calc(var(--glow-base) + var(--xp, 0) * var(--glow-spread));
+  --gx: calc(var(--x, -1000) * 1px);
+  --gy: calc(var(--y, -1000) * 1px);
+
+  position: relative;
+  isolation: isolate;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  background-color: var(--glass);
+  background-image: radial-gradient(
+    var(--glow-size) var(--glow-size) at var(--gx) var(--gy),
+    hsl(var(--hue) 100% 68% / 0.18),
+    transparent
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow-sm);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+/* glowing border ring */
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  pointer-events: none;
+  border: var(--glow-ring) solid transparent;
+  border-radius: var(--radius);
+  background: radial-gradient(
+      calc(var(--glow-size) * 0.75) calc(var(--glow-size) * 0.75) at var(--gx) var(--gy),
+      hsl(var(--hue) 85% 62%),
+      transparent 100%
+    )
+    border-box;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* keep only the border area of the box */
+  -webkit-mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+/* soft halo that bleeds slightly outside the card */
+.halo {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: var(--radius);
+  opacity: 0.55;
+  filter: blur(12px);
+}
+.halo::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 8px solid transparent;
+  border-radius: calc(var(--radius) + 8px);
+  background: radial-gradient(
+      var(--glow-size) var(--glow-size) at var(--gx) var(--gy),
+      hsl(var(--hue) 100% 62%),
+      transparent
+    )
+    border-box;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}

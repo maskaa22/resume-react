@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 import { navItems } from "../../constants";
 import c from "./Header.module.css";
 
@@ -56,7 +56,7 @@ export default function Header() {
           <a href="#hero" className={c.logo} aria-label="Mariia Skydan — home">
             <span className={c.mark}>MS</span>
             <span className={c.divider} />
-            <span className={c.logoText}>Portfolio</span>
+            <span className={c.logoText}>Skydan</span>
           </a>
 
           <nav
@@ -84,8 +84,13 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            <a href="#contact" className={c.cta} onClick={close}>
-              Let’s talk <FiArrowUpRight />
+            <a
+              href="/files/MarriaSkydan_FullStack.pdf"
+              download
+              className={c.cta}
+              onClick={close}
+            >
+              Download Resume <FiDownload />
             </a>
           </nav>
 

@@ -1,5 +1,5 @@
 import Hero from "../hero/Hero";
-import About from "../about/About";
+import Tape from "../tape/Tape";
 import Skills from "../skills/Skills";
 import Timeline from "../timeline/Timeline";
 import Projects from "../projects/Projects";
@@ -9,10 +9,10 @@ export default function Main() {
   return (
     <main>
       <Hero />
-      <About />
-      <Skills />
-      <Timeline />
       <Projects />
+      <Timeline />
+      <Tape />
+      <Skills />
       <Talk />
     </main>
   );

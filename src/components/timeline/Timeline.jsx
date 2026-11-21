@@ -5,7 +5,7 @@ import c from "./Timeline.module.css";
 function Column({ title, items }) {
   return (
     <div className={c.column}>
-      <Reveal as="h3" className={`hand ${c.colTitle}`}>
+      <Reveal as="h3" className={`display ${c.colTitle}`}>
         {title}
       </Reveal>
       <ol className={c.list}>
