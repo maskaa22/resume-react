@@ -16,29 +16,13 @@ export default function Footer() {
               products.
             </p>
             <ul className={c.social}>
-              <li>
-                <a href="https://github.com/maskaa22" aria-label="GitHub">
-                  <Icon name="github" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/mariia-skydan"
-                  aria-label="LinkedIn"
-                >
-                  <Icon name="linkedin" />
-                </a>
-              </li>
-              <li>
-                <a href="mailto:kyrosika565@gmail.com" aria-label="E-mail">
-                  <Icon name="mail" />
-                </a>
-              </li>
-              <li>
-                <a href="https://t.me/maskaa22" aria-label="Telegram">
-                  <Icon name="telegram" />
-                </a>
-              </li>
+              {contacts.map((item) => (
+                <li key={item.id}>
+                  <a href={item.href} aria-label={item.label}>
+                    <Icon name={item.icon} />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

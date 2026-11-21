@@ -14,7 +14,6 @@ export default function Hero() {
   return (
     <section className={c.hero} id="hero">
       <div className={`container ${c.grid}`}>
-        {/* ───── left: intro ───── */}
         <div className={c.left}>
           <motion.h1 className={c.h1} {...rise(0.1)}>
             <span>Mariia</span>
@@ -47,7 +46,6 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* ───── centre: photo collage ───── */}
         <motion.div
           className={c.stage}
           initial={{ opacity: 0, scale: 0.94 }}
@@ -62,11 +60,12 @@ export default function Hero() {
             alt="Mariia Skydan"
             width="733"
             height="1285"
+            // React 18 only knows the lowercase attribute (fetchPriority needs React 19)
+            // eslint-disable-next-line react/no-unknown-property
             fetchpriority="high"
           />
         </motion.div>
 
-        {/* ───── right: info cards ───── */}
         <div className={c.right}>
           <motion.div className={`${c.card} glass`} {...rise(0.3)}>
             <h2 className={`display ${c.cardTitle}`}>My Tech Stack</h2>

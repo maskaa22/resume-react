@@ -10,7 +10,7 @@ export default function Header() {
   const [active, setActive] = useState("");
   const [scrolled, setScrolled] = useState(false);
 
-  // highlight the section that is currently on screen
+
   useEffect(() => {
     const sections = navItems
       .map((item) => document.getElementById(item.id))
@@ -39,7 +39,7 @@ export default function Header() {
     };
   }, []);
 
-  // lock page scroll while the mobile menu is open
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
@@ -56,7 +56,7 @@ export default function Header() {
           <a href="#hero" className={c.logo} aria-label="Mariia Skydan — home">
             <span className={c.mark}>MS</span>
             <span className={c.divider} />
-            <span className={c.logoText}>Skydan</span>
+            <span className={c.logoText}>Mariia Skydan</span>
           </a>
 
           <nav

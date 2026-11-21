@@ -226,24 +226,28 @@ export const services = [
 export const contacts = [
   {
     id: "email",
+    icon: "mail",
     label: "E-mail",
     value: "kyrosika565@gmail.com",
     href: "mailto:kyrosika565@gmail.com",
   },
   {
     id: "telegram",
+    icon: "telegram",
     label: "Telegram",
     value: "@maskaa22",
     href: "https://t.me/maskaa22",
   },
   {
     id: "github",
+    icon: "github",
     label: "GitHub",
     value: "github.com/maskaa22",
     href: "https://github.com/maskaa22",
   },
   {
     id: "linkedin",
+    icon: "linkedin",
     label: "LinkedIn",
     value: "in/mariia-skydan",
     href: "https://www.linkedin.com/in/mariia-skydan",
