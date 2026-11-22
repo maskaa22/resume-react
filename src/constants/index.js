@@ -59,6 +59,8 @@ export const experience = [
   },
 ];
 
+export const resumeUrl = `${import.meta.env.BASE_URL}files/MariiaSkydan_FullStack.pdf`;
+
 export const projects = [
     {
     id: 1,
@@ -66,17 +68,17 @@ export const projects = [
     data: "2026-now",
     skills: ["#react", "#scss"],
     url: "https://sweetopia-flame.vercel.app/",
-    foto: "./projects/sweetopia.png",
+    foto: "./projects/sweetopia.webp",
     alt: "Sweetopia",
     text: "A landing page about sweets, featuring animations and generated images, is currently under development. It is being created using AI.",
   },
     {
     id: 2,
-    title: "VerbUp'",
+    title: "VerbUp",
     data: "2025-now",
     skills: ["#react", "#scss", "#redux", "#canvas"],
     url: "https://verbup-fe.vercel.app/",
-    foto: "./projects/verbUp.png",
+    foto: "./projects/verbUp.webp",
     alt: "VerbUp",
     text: "A web application for learning irregular English verbs through games. The app is still under development, but already features a wide range of functions, such as registration, a personal dashboard, score tracking, a choice of difficulty levels and more.",
   },
@@ -86,7 +88,7 @@ export const projects = [
     data: "2025",
     skills: ["#js", "#html", "#css"],
     url: "https://dimabarbara.github.io/project-WebGuru/",
-    foto: "./projects/full-stack.png",
+    foto: "./projects/full-stack.webp",
     alt: "Portfolio",
     text: "Portfolio site. Role: Developer. Collaborated on the 'About Us' section as part of a pair programming effort. Conducted thorough code reviews to ensure consistency and quality, assisted in the development of other sections, and actively participated in debugging and optimization code and images tasks to improve site performance.",
   },
@@ -96,7 +98,7 @@ export const projects = [
     data: "2024",
     skills: ["#html", "#css"],
     url: "https://maskaa22.github.io/perfect-developers/",
-    foto: "./projects/watcharm.png",
+    foto: "./projects/watcharm.webp",
     alt: "Watcharm",
     text: "A responsive website built with attention to layout and performance. Role: Team Lead & Developer. Responsible for project setup on GitHub, checking build errors, monitoring live page performance, and developing the header component. Also contributed to team coordination, code reviews, and deployment process.",
   },
@@ -106,7 +108,7 @@ export const projects = [
     data: "2023",
     skills: ["#react", "#node", "#redux", "#mongo", "#chart"],
     url: "https://o-react.vercel.app/",
-    foto: "./projects/olena-studio.png",
+    foto: "./projects/olena-studio.webp",
     alt: "Olena Studio",
     text: "Full stack website. Logining, salon appointment, products buy, etc. Separate admin account with setting products and more. Also, the site has an analysis for the administrator using React Chart. The documentation is written by Swagger.",
   },
@@ -116,7 +118,7 @@ export const projects = [
     data: "2023",
     skills: ["#react", "#node", "#redux", "#mongo"],
     url: "https://ulia-ushenko.vercel.app/",
-    foto: "./projects/ulia-ushenko.png",
+    foto: "./projects/ulia-ushenko.webp",
     alt: "Ulia Ushenko",
     text: "Full-stack website. Front-end developed using React, back-end built with Node.js, and MongoDB used as the database. The platform features an admin panel for a poet to upload and manage poems, with functionality for registered users to rate and comment on the poems.",
   },
@@ -126,7 +128,7 @@ export const projects = [
     data: "2024",
     skills: ["#react", "#css"],
     url: "https://forest-site.vercel.app/",
-    foto: "./projects/natural-forest.png",
+    foto: "./projects/natural-forest.webp",
     alt: "Natural Forest",
     text: "This site is built with React. A key feature of the project is the interactive 3D main screen, where users can explore the structure more comprehensively by moving the mouse. The project also includes smooth animations, responsive design, and optimized performance for seamless user experience across different devices.",
   },
@@ -136,7 +138,7 @@ export const projects = [
     data: "2023",
     skills: ["#react", "#three_fiber", "#tailwind_css"],
     url: "https://3d-model-website-ten.vercel.app/",
-    foto: "./projects/3-d-model.png",
+    foto: "./projects/3-d-model.webp",
     alt: "3D",
     text: "Written in React using 3D models. The main window features an interactive menu designed as a star system, where users can navigate to other pages by scrolling. The project incorporates smooth transitions, engaging animations, and dynamic content that responds to user interaction for a unique browsing experience.",
   },
@@ -146,22 +148,11 @@ export const projects = [
     data: "2023",
     skills: ["#react", "#tailwind_css"],
     url: "https://bank-system-weld.vercel.app/",
-    foto: "./projects/hoo-bank.png",
+    foto: "./projects/hoo-bank.webp",
     alt: "Hoo bank",
     text: "Written in React using Tailwind CSS. A simple landing page that highlights banking opportunities. The main advantage is the use of a new CSS library, providing a clean, modern design with highly customizable components for a responsive user experience. The site is optimized for fast load times and seamless navigation.",
   },
-  {
-    id: 10,
-    title: "Landing - 'Hoo bank'",
-    data: "2023",
-    skills: ["#react", "#node"],
-    url: "https://bank-system-weld.vercel.app/",
-    foto: "./projects/hoo-bank.png",
-    alt: "Hoo bank",
-    text: "Written in React using Tailwind CSS. A simple landing page that highlights banking opportunities. The main advantage is the use of a new CSS library, providing a clean, modern design with highly customizable components for a responsive user experience. The site is optimized for fast load times and seamless navigation.",
-  }
 ];
-
 
 export const navItems = [
   { id: "projects", label: "Projects" },

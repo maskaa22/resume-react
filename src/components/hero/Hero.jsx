@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiArrowDown, FiArrowUpRight } from "react-icons/fi";
-import { heroTools } from "../../constants";
+import { heroTools, resumeUrl } from "../../constants";
 import { techIcons } from "../../constants/techIcons";
 import c from "./Hero.module.css";
 
@@ -35,7 +35,7 @@ export default function Hero() {
 
           <motion.div className={c.actions} {...rise(0.4)}>
             <a
-              href="/files/MarriaSkydan_FullStack.pdf"
+              href={resumeUrl}
               download
               className="btn btnPrimary"
             >
@@ -57,7 +57,7 @@ export default function Hero() {
           <div className={c.blobRing} />
           <img
             className={c.photo}
-            src="./hero/hero-cutout.png"
+            src="./hero/hero-cutout.webp"
             alt="Mariia Skydan"
             width="733"
             height="1285"

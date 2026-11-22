@@ -7,7 +7,7 @@ import Talk from "../talk/Talk";
 
 export default function Main() {
   return (
-    <main>
+    <main id="main">
       <Hero />
       <Projects />
       <Timeline />

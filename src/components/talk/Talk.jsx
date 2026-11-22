@@ -4,14 +4,6 @@ import Icon from "../icon/Icon";
 import Reveal from "../reveal/Reveal";
 import c from "./Talk.module.css";
 
-// contact id → symbol name in the sprite
-const icons = {
-  email: "mail",
-  telegram: "telegram",
-  github: "github",
-  linkedin: "linkedin",
-};
-
 export default function Talk() {
   return (
     <section id="contact" className={`section ${c.contact}`}>
@@ -41,7 +33,7 @@ export default function Talk() {
                       rel="noopener noreferrer"
                     >
                       <span className={c.linkIcon}>
-                        <Icon name={icons[item.id]} />
+                        <Icon name={item.icon} />
                       </span>
                       <span className={c.linkText}>
                         <small>{item.label}</small>

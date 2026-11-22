@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { FiDownload } from "react-icons/fi";
-import { navItems } from "../../constants";
+import { navItems, resumeUrl } from "../../constants";
 import c from "./Header.module.css";
 
 export default function Header() {
@@ -47,6 +47,15 @@ export default function Header() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isOpen]);
+
   const close = () => setIsOpen(false);
 
   return (
@@ -85,7 +94,7 @@ export default function Header() {
               ))}
             </ul>
             <a
-              href="/files/MarriaSkydan_FullStack.pdf"
+              href={resumeUrl}
               download
               className={c.cta}
               onClick={close}

@@ -9,7 +9,7 @@
 .item {
   display: flex;
 }
-/* glass look + spotlight come from <GlowCard>; this is layout only */
+
 .card {
   flex: 1;
   display: flex;

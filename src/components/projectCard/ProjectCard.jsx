@@ -19,13 +19,16 @@ const ProjectCard = forwardRef(function ProjectCard({ project, featured = false 
         target="_blank"
         rel="noopener noreferrer"
         className={c.link}
-        aria-label={`Open ${project.title}`}
+        aria-label={`${project.title} — opens in a new tab`}
       >
         <div className={c.media}>
           <img
             src={project.foto}
             alt={project.alt}
             loading="lazy"
+            decoding="async"
+            width="1200"
+            height="900"
             className={c.img}
           />
           <ul className={c.tags}>

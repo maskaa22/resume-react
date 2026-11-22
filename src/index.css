@@ -4,7 +4,7 @@
   --bg-deep: #eddfce;
   --ink: #2a1e18;
   --ink-2: #5f5148;
-  --ink-3: #8c7d72;
+  --ink-3: #6f6157;
   --line: rgba(42, 30, 24, 0.12);
   --glass: rgba(255, 255, 255, 0.55);
   --glass-strong: rgba(255, 255, 255, 0.8);
@@ -112,6 +112,23 @@ img {
 ::selection {
   background: var(--peach);
   color: var(--ink);
+}
+
+.skipLink {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fbf4ea;
+  font-size: 14px;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+.skipLink:focus {
+  transform: none;
 }
 
 /* ───────── Layout ───────── */
@@ -266,5 +283,12 @@ img {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

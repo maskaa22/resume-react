@@ -12,7 +12,6 @@ export default function Projects() {
   const [filter, setFilter] = useState(ALL);
   const [expanded, setExpanded] = useState(false);
 
-  // chips: most-used technologies first
   const filters = useMemo(() => {
     const counts = {};
     projects.forEach((p) =>
@@ -28,7 +27,7 @@ export default function Projects() {
 
   const filtered =
     filter === ALL ? projects : projects.filter((p) => p.skills.includes(filter));
-  // the featured card spans 2 columns, so 8 cards fill three full rows
+ 
   const visible = filter === ALL ? 8 : 6;
   const shown = expanded ? filtered : filtered.slice(0, visible);
   const hidden = filtered.length - shown.length;
