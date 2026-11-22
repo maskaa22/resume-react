@@ -1,28 +1,68 @@
 .skills {
-    margin-top: 30px;
+  position: relative;
 }
 
-.marquee {
-    background-color: #c762e7;
-    height: 50px;
+.grid {
+  display: grid;
+  gap: 18px;
 }
 .item {
-    padding: 5px;
-    color: white;
+  display: flex;
 }
 
-@media only screen and (min-width: 768px) {
-    .item {
-        padding: 5px 10px;
-    }
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 28px 26px;
 }
-@media only screen and (min-width: 1024px) {
-    .item {
-        padding: 10px 15px;
-    }
+.num {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(168, 96, 63, 0.12);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--accent-deep);
 }
-@media only screen and (min-width: 1440px) {
-    .item {
-        padding: 15px 20px;
-    }
+.title {
+  margin-top: 56px;
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.05;
+}
+.text {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--ink-2);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.tags li {
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.tags li + li::before {
+  content: "·";
+  margin-right: 8px;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

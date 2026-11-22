@@ -1,0 +1,9 @@
+/* The sprite's symbols are line icons: they define stroke width but no colour,
+   so stroke/fill must be set here (inherited into the <use> shadow tree). */
+.icon {
+  flex: none;
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+}

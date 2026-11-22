@@ -1,0 +1,139 @@
+.card {
+  border-radius: var(--radius);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition:
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+.card:hover {
+  background: var(--glass-strong);
+  box-shadow: var(--shadow);
+}
+.link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 10px);
+  background: var(--bg-deep);
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card:hover .img {
+  transform: scale(1.05);
+}
+.tags {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tags li {
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(250, 244, 235, 0.88);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 14px 14px;
+}
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.title {
+  font-family: var(--serif);
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1.08;
+}
+.date {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.arrow {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+.card:hover .arrow {
+  background: var(--ink);
+  color: #fbf4ea;
+  transform: rotate(45deg);
+}
+.text {
+  margin-top: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+@media (min-width: 1024px) {
+  .featured {
+    grid-column: span 2;
+  }
+  .featured .link {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .featured .media {
+    flex: 1.35;
+    aspect-ratio: auto;
+    min-height: 360px;
+  }
+  .featured .body {
+    flex: 1;
+    justify-content: center;
+    padding: 24px 22px;
+  }
+  .featured .title {
+    font-size: 40px;
+  }
+  .featured .text {
+    -webkit-line-clamp: 6;
+    font-size: 15.5px;
+  }
+}

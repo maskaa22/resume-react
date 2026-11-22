@@ -1,18 +1,70 @@
+/* ───────── Design tokens (v2.0 — soft cream / glass) ───────── */
+:root {
+  --bg: #f6eee4;
+  --bg-deep: #eddfce;
+  --ink: #2a1e18;
+  --ink-2: #5f5148;
+  --ink-3: #6f6157;
+  --line: rgba(42, 30, 24, 0.12);
+  --glass: rgba(255, 255, 255, 0.55);
+  --glass-strong: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --accent: #a8603f;
+  --accent-deep: #8a4a2d;
+  --peach: #f3cdb4;
+  --lilac: #d9c9ee;
+  --sage: #d3dcc4;
+  --shadow: 0 18px 50px -18px rgba(94, 62, 40, 0.28);
+  --shadow-sm: 0 8px 24px -10px rgba(94, 62, 40, 0.22);
+
+  --serif: "Cormorant Garamond", "Times New Roman", serif;
+  --sans: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius: 28px;
+  --radius-sm: 18px;
+  --header-h: 84px;
+  /* vertical padding of every section: the gap between two sections is 2x this */
+  --section-pad: 44px;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-/* #f6e5fa; для disable */
-/* #9b01d0 для active */
-/*#c591d6 для hover*/
+
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 8px);
 }
+
 body {
   margin: 0;
-  /* font-family: 'Gilroy', sans-serif; */
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
 }
+
+/* soft, fixed colour washes behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(55% 45% at 88% 6%, rgba(243, 205, 180, 0.75), transparent 70%),
+    radial-gradient(45% 40% at 100% 50%, rgba(217, 201, 238, 0.6), transparent 70%),
+    radial-gradient(55% 45% at 0% 100%, rgba(243, 205, 180, 0.55), transparent 70%),
+    radial-gradient(40% 35% at 10% 30%, rgba(255, 255, 255, 0.7), transparent 70%),
+    var(--bg);
+}
+
 h1,
 h2,
 h3,
@@ -23,14 +75,23 @@ p {
   margin: 0;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
 }
 
 button {
@@ -42,43 +103,192 @@ img {
   max-width: 100%;
   height: auto;
 }
-input {outline:none;}
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--peach);
+  color: var(--ink);
+}
+
+.skipLink {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fbf4ea;
+  font-size: 14px;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+.skipLink:focus {
+  transform: none;
+}
+
+/* ───────── Layout ───────── */
 .container {
-  padding: 0 32px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 24px;
   margin: 0 auto;
 }
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .container {
     padding: 0 48px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media (min-width: 1280px) {
   .container {
     padding: 0 72px;
   }
 }
-/* 1280 */
-@media only screen and (min-width: 1440px) {
-  .container {
-    padding: 0 90px;
+
+.section {
+  padding: var(--section-pad) 0;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  :root {
+    --section-pad: 96px;
   }
 }
 
-
-.experience-container {
-  background: black;
-  color: white;
-  padding: 20px;
-  max-width: 600px;
-  margin: auto;
+/* ───────── Shared building blocks ───────── */
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
 }
 
-.title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
+.display {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+}
 
+.sectionHead {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 56px;
+}
+.sectionTitle {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5.4vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  max-width: 14ch;
+}
+/* tablet: section titles stay on one line (the manual line breaks are dropped).
+   !important beats the per-heading max-width set inline. */
+@media (min-width: 600px) and (max-width: 899px) {
+  .sectionTitle {
+    max-width: none !important;
+  }
+  .titleBreak {
+    display: none;
+  }
+}
+.sectionTitle em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 500;
+}
+.sectionLead {
+  max-width: 44ch;
+  color: var(--ink-2);
+  font-size: 17px;
+}
+@media (min-width: 900px) {
+  .sectionHead.split {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 48px;
+  }
+}
+
+/* buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btnPrimary {
+  background: var(--ink);
+  color: #fbf4ea;
+  box-shadow: 0 12px 28px -12px rgba(42, 30, 24, 0.6);
+}
+.btnPrimary:hover {
+  background: var(--accent-deep);
+}
+.btnGhost {
+  background: rgba(255, 255, 255, 0.45);
+  border-color: var(--line);
+  color: var(--ink);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.btnGhost:hover {
+  background: #fff;
+  border-color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
