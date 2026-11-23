@@ -62,7 +62,27 @@ export const experience = [
 export const resumeUrl = `${import.meta.env.BASE_URL}files/MariiaSkydan_FullStack.pdf`;
 
 export const projects = [
-    {
+  {
+    id: 11,
+    title: "PetMind",
+    data: "2026",
+    skills: ["#react", "#typescript", "#supabase", "#scss"],
+    url: "https://pet-mind-two.vercel.app/",
+    foto: "./projects/petmind.webp",
+    alt: "PetMind — pet wellbeing web app",
+    text: "A full-stack SaaS-style app that turns a short personality quiz into a personalised care plan for a pet, then helps owners track its wellbeing over time. Onboarding funnel from landing to quiz, sign-up, paywall and dashboard; auth and data on Supabase (Postgres) with Row Level Security, triggers and SQL functions; species-aware reports, mood journal, weight and mood charts, weekly insights and a rule-based care coach. Freemium model with gated premium features and checkout. Built with React, TypeScript, Vite, React Router, SCSS Modules, Recharts and Supabase.",
+  },
+  {
+    id: 5,
+    title: "Website - 'Olena Studio'",
+    data: "2023",
+    skills: ["#react", "#node", "#redux", "#mongo", "#chart"],
+    url: "https://o-react.vercel.app/",
+    foto: "./projects/olena-studio.webp",
+    alt: "Olena Studio",
+    text: "Full stack website. Logining, salon appointment, products buy, etc. Separate admin account with setting products and more. Also, the site has an analysis for the administrator using React Chart. The documentation is written by Swagger.",
+  },
+  {
     id: 1,
     title: "Sweetopia",
     data: "2026-now",
@@ -72,7 +92,7 @@ export const projects = [
     alt: "Sweetopia",
     text: "A landing page about sweets, featuring animations and generated images, is currently under development. It is being created using AI.",
   },
-    {
+  {
     id: 2,
     title: "VerbUp",
     data: "2025-now",
@@ -101,16 +121,6 @@ export const projects = [
     foto: "./projects/watcharm.webp",
     alt: "Watcharm",
     text: "A responsive website built with attention to layout and performance. Role: Team Lead & Developer. Responsible for project setup on GitHub, checking build errors, monitoring live page performance, and developing the header component. Also contributed to team coordination, code reviews, and deployment process.",
-  },
-  {
-    id: 5,
-    title: "Website - 'Olena Studio'",
-    data: "2023",
-    skills: ["#react", "#node", "#redux", "#mongo", "#chart"],
-    url: "https://o-react.vercel.app/",
-    foto: "./projects/olena-studio.webp",
-    alt: "Olena Studio",
-    text: "Full stack website. Logining, salon appointment, products buy, etc. Separate admin account with setting products and more. Also, the site has an analysis for the administrator using React Chart. The documentation is written by Swagger.",
   },
   {
     id: 6,
