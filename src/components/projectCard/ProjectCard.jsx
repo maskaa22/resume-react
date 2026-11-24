@@ -4,6 +4,17 @@ import { FiArrowUpRight } from "react-icons/fi";
 import c from "./ProjectCard.module.css";
 
 const ProjectCard = forwardRef(function ProjectCard({ project, featured = false }, ref) {
+  // a project without a live URL still renders, just not as a link
+  const Wrapper = project.url ? "a" : "div";
+  const linkProps = project.url
+    ? {
+        href: project.url,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        "aria-label": `${project.title} — opens in a new tab`,
+      }
+    : {};
+
   return (
     <motion.article
       ref={ref}
@@ -14,13 +25,7 @@ const ProjectCard = forwardRef(function ProjectCard({ project, featured = false 
       transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       className={`${c.card} ${featured ? c.featured : ""}`}
     >
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={c.link}
-        aria-label={`${project.title} — opens in a new tab`}
-      >
+      <Wrapper className={c.link} {...linkProps}>
         <div className={c.media}>
           <img
             src={project.foto}
@@ -44,13 +49,15 @@ const ProjectCard = forwardRef(function ProjectCard({ project, featured = false 
               <h3 className={c.title}>{project.title}</h3>
               <p className={c.date}>{project.data}</p>
             </div>
-            <span className={c.arrow}>
-              <FiArrowUpRight />
-            </span>
+            {project.url && (
+              <span className={c.arrow}>
+                <FiArrowUpRight />
+              </span>
+            )}
           </div>
           <p className={c.text}>{project.text}</p>
         </div>
-      </a>
+      </Wrapper>
     </motion.article>
   );
 });
